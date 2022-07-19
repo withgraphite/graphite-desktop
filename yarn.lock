@@ -517,13 +517,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.0.177":
-  version: 0.0.177
-  resolution: "@types/chrome@npm:0.0.177"
+"@types/chrome@npm:^0.0.193":
+  version: 0.0.193
+  resolution: "@types/chrome@npm:0.0.193"
   dependencies:
     "@types/filesystem": "*"
     "@types/har-format": "*"
-  checksum: 02c070e07572439cad918c76ef760eaf43358ef110b49f76a6eecea76e40b272b48048e2a335a19a2591ae7adb2a87548a40e38fcc2dca66b130bc4a0775724f
+  checksum: f01205376becff1a229443473c697b0ab42d87af00dc2a52f7a16bce2ad223875fd95ebee12ab1598f2669eb1af26953863c37aace7e87551f68ff73eaaedba5
   languageName: node
   linkType: hard
 
@@ -631,7 +631,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^4.15.2":
+"@typescript-eslint/eslint-plugin@npm:^4.33.0":
   version: 4.33.0
   resolution: "@typescript-eslint/eslint-plugin@npm:4.33.0"
   dependencies:
@@ -669,7 +669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^4.15.2":
+"@typescript-eslint/parser@npm:^4.33.0":
   version: 4.33.0
   resolution: "@typescript-eslint/parser@npm:4.33.0"
   dependencies:
@@ -1881,16 +1881,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:^17.0.0":
-  version: 17.0.0
-  resolution: "electron@npm:17.0.0"
+"electron@npm:^17.4.10":
+  version: 17.4.10
+  resolution: "electron@npm:17.4.10"
   dependencies:
     "@electron/get": ^1.13.0
     "@types/node": ^14.6.2
     extract-zip: ^1.0.3
   bin:
     electron: cli.js
-  checksum: c945a1a5475ba66ca70637b150b3f10ea9d28b1f2167a9d8d2137e087785f647e1153f4335f898238470392ed689e3d207b2b96928025c5dd092d6f601e21414
+  checksum: 528fd51d9f881d3195bea0c5f4546aedb328cfce82a1cdfb600039707e7034088b3829e3c36a099983667bcca0b791850f7802ff45fe44137141ab181f6b7cdd
   languageName: node
   linkType: hard
 
@@ -1965,7 +1965,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.8.46":
+"esbuild@npm:^0.8.57":
   version: 0.8.57
   resolution: "esbuild@npm:0.8.57"
   bin:
@@ -2039,7 +2039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.20.0":
+"eslint@npm:^7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -2428,6 +2428,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "fs-extra@npm:10.1.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^6.0.1
+    universalify: ^2.0.0
+  checksum: dc94ab37096f813cc3ca12f0f1b5ad6744dfed9ed21e953d72530d103cea193c2f81584a39e9dee1bea36de5ee66805678c0dddc048e8af1427ac19c00fffc50
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^4.0.0":
   version: 4.0.3
   resolution: "fs-extra@npm:4.0.3"
@@ -2780,17 +2791,17 @@ __metadata:
     "@electron-forge/maker-rpm": ^6.0.0-beta.63
     "@electron-forge/maker-squirrel": ^6.0.0-beta.63
     "@electron-forge/maker-zip": ^6.0.0-beta.63
-    "@types/chrome": ^0.0.177
-    "@typescript-eslint/eslint-plugin": ^4.15.2
-    "@typescript-eslint/parser": ^4.15.2
-    electron: ^17.0.0
+    "@types/chrome": ^0.0.193
+    "@typescript-eslint/eslint-plugin": ^4.33.0
+    "@typescript-eslint/parser": ^4.33.0
+    electron: ^17.4.10
     electron-squirrel-startup: ^1.0.0
-    esbuild: ^0.8.46
-    eslint: ^7.20.0
-    fs-extra: ^10.0.0
-    prettier: 2.3.2
-    ts-node: ^9.0.0
-    typescript: ^4.2.4
+    esbuild: ^0.8.57
+    eslint: ^7.32.0
+    fs-extra: ^10.1.0
+    prettier: 2.7.1
+    ts-node: ^9.1.1
+    typescript: ^4.7.4
     update-electron-app: ^2.0.1
   languageName: unknown
   linkType: soft
@@ -4400,12 +4411,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.3.2":
-  version: 2.3.2
-  resolution: "prettier@npm:2.3.2"
+"prettier@npm:2.7.1":
+  version: 2.7.1
+  resolution: "prettier@npm:2.7.1"
   bin:
     prettier: bin-prettier.js
-  checksum: 17ce5784ac67621c292df58e2da60b2ee150c2d6aebea22a6ad9e52fcd6a5e66c349d0a8436ea3bd8ff9d778920a5f68000d7625b74f43558718a49755aa5259
+  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
   languageName: node
   linkType: hard
 
@@ -5455,7 +5466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9.0.0":
+"ts-node@npm:^9.1.1":
   version: 9.1.1
   resolution: "ts-node@npm:9.1.1"
   dependencies:
@@ -5561,23 +5572,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.2.4":
-  version: 4.5.5
-  resolution: "typescript@npm:4.5.5"
+"typescript@npm:^4.7.4":
+  version: 4.7.4
+  resolution: "typescript@npm:4.7.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 506f4c919dc8aeaafa92068c997f1d213b9df4d9756d0fae1a1e7ab66b585ab3498050e236113a1c9e57ee08c21ec6814ca7a7f61378c058d79af50a4b1f5a5e
+  checksum: 5750181b1cd7e6482c4195825547e70f944114fb47e58e4aa7553e62f11b3f3173766aef9c281783edfd881f7b8299cf35e3ca8caebe73d8464528c907a164df
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.2.4#~builtin<compat/typescript>":
-  version: 4.5.5
-  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
+"typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
+  version: 4.7.4
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: c05c318d79c690f101d7ffb34cd6c7d6bbd884d3af9cefe7749ad0cd6be43c7082f098280982ca945dcba23fde34a08fed9602bb26540936baf8c0520727d3ba
+  checksum: 96d3030cb01143570567cb4f3a616b10df65f658f0e74e853e77a089a6a954e35c800be7db8b9bfe9a1ae05d9c2897e281359f65e4caa1caf266368e1c4febd3
   languageName: node
   linkType: hard
 
