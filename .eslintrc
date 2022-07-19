@@ -8,7 +8,7 @@
   "rules": {
     "@typescript-eslint/no-floating-promises": "error",
     "max-lines-per-function": ["error", { "max": 120 }],
-    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error"
   },
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"]
 }
