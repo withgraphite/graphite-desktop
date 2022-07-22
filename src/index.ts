@@ -2,6 +2,11 @@ import { app, BrowserWindow, screen } from 'electron';
 import open from 'open';
 import autoupdate from 'update-electron-app';
 
+const GRAPHITE_URL =
+  process.env.NODE_ENV == 'development'
+    ? 'https://app.graphite.dev'
+    : 'http://localhost:3000';
+
 /**
  * TODOs:
  *  - Add codesigning to electron forge
@@ -27,13 +32,13 @@ function createWindow() {
   });
 
   win.webContents.on('will-navigate', (event, url) => {
-    if (!url.startsWith('https://app.graphite.dev')) {
+    if (!url.startsWith(GRAPHITE_URL)) {
       event.preventDefault();
       void open(url);
     }
   });
 
-  void win.loadURL('https://app.graphite.dev');
+  void win.loadURL(GRAPHITE_URL);
 }
 
 void app.whenReady().then(() => {
