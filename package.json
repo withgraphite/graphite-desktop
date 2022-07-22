@@ -12,7 +12,6 @@
     "start": "yarn build && electron-forge start",
     "build": "NODE_ENV=\"production\" node ./scripts/esbuild.js",
     "lint": "eslint src --quiet --ext .ts --cache",
-    "prepublishOnly": "yarn build",
     "package": "yarn build && electron-forge package",
     "make": "yarn build && electron-forge make"
   },
@@ -47,32 +46,6 @@
     "update-electron-app": "^2.0.1"
   },
   "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "public/icon.icns"
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "graphite_desktop"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge.config.js"
   }
 }
