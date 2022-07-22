@@ -8,6 +8,7 @@
   "homepage": "https://github.com/screenplaydev/graphite-desktop",
   "private": true,
   "scripts": {
+    "dev": "node ./scripts/esbuild.js && electron-forge start -- 'http://localhost:3000/'",
     "start": "yarn build && electron-forge start",
     "build": "NODE_ENV=\"production\" node ./scripts/esbuild.js",
     "lint": "eslint src --quiet --ext .ts --cache",
