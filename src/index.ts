@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, screen } from 'electron';
 import autoupdate from 'update-electron-app';
 
 /**
@@ -15,8 +15,7 @@ if (process.env.NEVER) {
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    ...screen.getPrimaryDisplay().workAreaSize,
     backgroundColor: '#1e1e24',
     // TODO: Create windows version
     icon: __dirname + '/icons.icns',
