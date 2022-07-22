@@ -10,5 +10,23 @@
     "max-lines-per-function": ["error", { "max": 120 }],
     "@typescript-eslint/explicit-module-boundary-types": "error"
   },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"]
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+      }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ]
 }
