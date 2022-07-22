@@ -8,11 +8,10 @@
   "homepage": "https://github.com/screenplaydev/graphite-desktop",
   "private": true,
   "scripts": {
-    "dev": "node ./scripts/esbuild.js && electron-forge start -- 'http://localhost:3000/'",
+    "dev": "node ./scripts/esbuild.js && electron-forge start",
     "start": "yarn build && electron-forge start",
     "build": "NODE_ENV=\"production\" node ./scripts/esbuild.js",
     "lint": "eslint src --quiet --ext .ts --cache",
-    "prepublishOnly": "yarn build",
     "package": "yarn build && electron-forge package",
     "make": "yarn build && electron-forge make"
   },
@@ -20,14 +19,16 @@
     "dist"
   ],
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.64",
+    "@electron-forge/cli": "^6.0.0-beta.65",
     "@electron-forge/maker-deb": "^6.0.0-beta.64",
     "@electron-forge/maker-rpm": "^6.0.0-beta.64",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.64",
     "@electron-forge/maker-zip": "^6.0.0-beta.64",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.0.0-beta.65",
     "@types/chrome": "^0.0.193",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
+    "dotenv": "^16.0.1",
     "electron": "^19.0.9",
     "esbuild": "^0.14.49",
     "eslint": "^8.20.0",
@@ -42,37 +43,10 @@
   "repository": "git@github.com:screenplaydev/graphite-desktop.git",
   "packageManager": "yarn@3.1.1",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
     "open": "^8.4.0",
     "update-electron-app": "^2.0.1"
   },
   "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "public/icon.icns"
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "graphite_desktop"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge.config.js"
   }
 }

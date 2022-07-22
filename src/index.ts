@@ -3,7 +3,7 @@ import open from 'open';
 import autoupdate from 'update-electron-app';
 
 const GRAPHITE_URL =
-  process.env.NODE_ENV == 'development'
+  process.env.NODE_ENV === 'production'
     ? 'https://app.graphite.dev'
     : 'http://localhost:3000';
 
