@@ -1,4 +1,5 @@
 import { app, BrowserWindow, screen } from 'electron';
+import open from 'open';
 import autoupdate from 'update-electron-app';
 
 /**
@@ -17,8 +18,12 @@ function createWindow() {
   const win = new BrowserWindow({
     ...screen.getPrimaryDisplay().workAreaSize,
     backgroundColor: '#1e1e24',
-    // TODO: Create windows version
     icon: __dirname + '/icons.icns',
+  });
+
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    void open(url);
+    return { action: 'deny' };
   });
 
   void win.loadURL('https://app.graphite.dev');
