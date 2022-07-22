@@ -26,6 +26,13 @@ function createWindow() {
     return { action: 'deny' };
   });
 
+  win.webContents.on('will-navigate', (event, url) => {
+    if (!url.startsWith('https://app.graphite.dev')) {
+      event.preventDefault();
+      void open(url);
+    }
+  });
+
   void win.loadURL('https://app.graphite.dev');
 }
 
