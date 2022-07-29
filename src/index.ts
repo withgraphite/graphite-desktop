@@ -7,17 +7,7 @@ const GRAPHITE_URL =
     ? 'https://app.graphite.dev'
     : 'http://localhost:3000';
 
-/**
- * TODOs:
- *  - Add codesigning to electron forge
- *    - https://www.electronjs.org/docs/latest/tutorial/code-signing
- *    - https://stackoverflow.com/questions/69046910/electron-forge-securely-add-appleid-and-password
- *  - Add GH action to release builds to GitHub releases
- *  - Windows support (?)
- */
-if (process.env.NEVER) {
-  autoupdate();
-}
+autoupdate();
 
 function createWindow() {
   const win = new BrowserWindow({
