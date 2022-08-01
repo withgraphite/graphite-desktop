@@ -7,6 +7,13 @@ const GRAPHITE_URL =
     ? 'https://app.graphite.dev'
     : 'http://localhost:3000';
 
+const GRAPHITE_API_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://api.graphite.dev/v1'
+    : 'http://localhost:8000/v1';
+
+const GITHUB_LOGIN_URL = 'https://github.com/login';
+
 autoupdate();
 
 function createWindow() {
@@ -22,7 +29,11 @@ function createWindow() {
   });
 
   win.webContents.on('will-navigate', (event, url) => {
-    if (!url.startsWith(GRAPHITE_URL)) {
+    if (
+      !url.startsWith(GRAPHITE_URL) &&
+      !url.startsWith(GRAPHITE_API_URL) &&
+      !url.startsWith(GITHUB_LOGIN_URL)
+    ) {
       event.preventDefault();
       void open(url);
     }
