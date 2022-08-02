@@ -12,7 +12,7 @@ const GRAPHITE_API_URL =
     ? 'https://api.graphite.dev/v1'
     : 'http://localhost:8000/v1';
 
-const GITHUB_LOGIN_URL = 'https://github.com/login';
+const GITHUB_LOGIN_URL = 'https://github.com/session';
 
 autoupdate();
 
